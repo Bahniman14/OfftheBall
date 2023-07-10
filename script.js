@@ -126,3 +126,36 @@ gsap.from("#page4 h1", {
 });
 
 
+function topFunction(){
+  const scrollToBottom =  800;;
+  window.scrollTo({
+    top: scrollToBottom,
+    behavior: 'smooth'
+  });
+}
+
+// History:
+const textContainer = document.getElementById("history_text");
+let text = "1800s: The early roots";
+    const typingSpeed = 5; // Speed in milliseconds (lower value = faster typing)
+    fetch('history.txt')
+    .then(response => response.text())
+    .then(con => {
+      text = con; // Output the file content to the console
+      // Perform further actions with the content as needed
+    })
+    .catch(error => {
+      console.error('Error reading file:', error);
+    });
+
+    let index_H = 0;
+
+    function typeText() {
+      if (index_H < text.length) {
+        textContainer.innerHTML += text.charAt(index_H);
+        index_H++;
+        setTimeout(typeText, typingSpeed);
+      }
+    }
+typeText();
+

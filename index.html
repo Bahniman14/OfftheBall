@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
 
   <body>
@@ -34,7 +34,7 @@
       autoplay
       loop
       muted
-      src="WF.mp4" preload="metadata"
+      src="./WF.mp4" preload="metadata"
     ></video>
     <div id="main">
       <div id="page1">
@@ -43,7 +43,7 @@
         <p>
           Offtheball.com is a place where football enthusiast learn about the game more, get aware with the latest hot topics, and build their own football team.
         </p>
-        <div id="arrow">
+        <div onclick="topFunction()" id="arrow">
           <i class="ri-arrow-down-line"></i>
         </div>
       </div>
@@ -173,6 +173,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
