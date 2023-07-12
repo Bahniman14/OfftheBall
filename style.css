@@ -449,16 +449,14 @@
   }
 
   #page2_H{
-    height: 300vh;
+    height: 400vh;
     width: 100%;
     position: relative;
     display: flex;
     /* https://images.unsplash.com/photo-1607414721186-5309963d7b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZvb3RiYWxsJTIwZmllbGR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60 */
   }
   #history_text{
-    margin-top: 140px;
-    margin-left: 180px;
-    margin-right: 100px;
+   margin: 16vh;
     font-size: 20px;
     color: white;
   }
@@ -471,7 +469,7 @@
     position: fixed;
   }
   #page3_H{
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -513,6 +511,15 @@
     background-color: beige;
     padding: 10px 20px;
     border-radius: 10px;
+    z-index: 101;
+  }
+
+  #AI_answer{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin: 50px;
+    color: aliceblue;
+    font-size: large;
   }
 
 

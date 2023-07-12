@@ -159,3 +159,31 @@ let text = "1800s: The early roots";
     }
 typeText();
 
+const userInput = document.getElementById("user-input");
+const submitButton = document.getElementById("submit-btn");
+const responseContainer = document.getElementById("AI_answer");
+
+
+const url = "http://127.0.0.1:8000/";
+
+const call_api = async (question) => {
+  try {
+    const options = {
+      method: "POST",
+      body: question,
+    };
+    const response = await fetch(url, options);
+    const result = await response.text();
+    return result
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+submitButton.addEventListener("click", async ()=>{
+const question = userInput.value;
+const _result = await call_api(question);
+if (_result){
+  responseContainer.textContent = _result;
+}
+})
