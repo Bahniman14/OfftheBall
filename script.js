@@ -181,9 +181,21 @@ const call_api = async (question) => {
 };
 
 submitButton.addEventListener("click", async ()=>{
+
 const question = userInput.value;
-const _result = await call_api(question);
-if (_result){
-  responseContainer.textContent = _result;
-}
+responseContainer.textContent = "Thinking...";
+
+const blinkInterval = setInterval(() => {
+  responseContainer.style.visibility = responseContainer.style.visibility === "hidden" ? "visible" : "hidden";
+}, 500);
+
+// Make the API call (you should replace this with your actual API call)
+const result = await call_api(question);
+
+// Stop the blinking effect
+clearInterval(blinkInterval);
+
+// Update the responseContainer with the result
+responseContainer.style.visibility = "visible";
+responseContainer.textContent = result;
 })
